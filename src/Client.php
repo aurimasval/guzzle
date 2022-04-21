@@ -56,6 +56,10 @@ class Client implements ClientInterface, \Psr\Http\Client\ClientInterface
      */
     public function __construct(array $config = [])
     {
+        $a = 6;
+        var_dump($config);
+        
+        
         if (!isset($config['handler'])) {
             $config['handler'] = HandlerStack::create();
         } elseif (!\is_callable($config['handler'])) {
